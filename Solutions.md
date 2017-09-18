@@ -19,7 +19,7 @@ Time Complexity:O(n)-where n is length of string s.
 Space Complexity:O(1)
 
 
-**Q2)Given a string a, find the longest palindromic substring contained in a. Your function definition should look like question2(a), and return a string.
+# Q2)Given a string a, find the longest palindromic substring contained in a. Your function definition should look like question2(a), and return a string.
 
 
 Solution2)This is a simple brute force approach for iteratively parsing thorugh each characater of a substring,and checking if its a palindrome or not.If it is a palindrome,i have stored it in an array iteratively.Then the array with largest palindromic substring is our answer.
@@ -31,8 +31,8 @@ Time Complexity-O(n2)
 Space Complexity-O(1)
 
 
-**Q3)Given an undirected graph G, find the minimum spanning tree within G. 
-A minimum spanning tree connects all vertices in a graph with the smallest possible total weight of edges.
+# Q3)Given an undirected graph G, find the minimum spanning tree within G. 
+# A minimum spanning tree connects all vertices in a graph with the smallest possible total weight of edges.
 
 
 Solution3)Here after building the graph with unique vertices,i have sorted edges in descending order.Then we pop edges one by one until any disconnection.This will ultimately give us our MST.
@@ -56,7 +56,7 @@ Space Complexity:O(E)
 
 
 
-**Q4)Find the least common ancestor between two nodes on a binary search tree. 
+# Q4)Find the least common ancestor between two nodes on a binary search tree. 
 
 
 Solution4)First we find immediate parent for a node in a tree,then until the root node isn't reached i have found the oldest parent to a nodes 1 and nodes 2.Then i have checked both them share a common ancestor,and this is lest common ancestor.
@@ -66,7 +66,7 @@ Space Complexity-O(log(n))
 
 
 
-**Q5)Find the element in a singly linked list that's m elements from the end. For example, if a linked list has 5 elements, the 3rd element from the end is the 3rd element.
+# Q5)Find the element in a singly linked list that's m elements from the end. For example, if a linked list has 5 elements, the 3rd element from the end is the 3rd element.
 
 
 Solution5)Here i first created a linkedlist,then traversed through every node to calcluste the length.Then we find distance between total length and mth element we want to find.Now we iterative though the list again till this distance,to find the mth element.
