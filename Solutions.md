@@ -59,7 +59,7 @@ Space Complexity:O(E)
 # Q4)Find the least common ancestor between two nodes on a binary search tree. 
 
 
-Solution4)First we find immediate parent for a node in a tree,then until the root node isn't reached i have found the oldest parent to a nodes 1 and nodes 2.Then i have checked both them share a common ancestor,and this is lest common ancestor.
+Solution4)First we find immediate parent for a node in a tree,then until the root node isn't reached i have found the oldest parent to a nodes 1 and nodes 2.Then i have checked if both of them share a common ancestor,and this is lest common ancestor.
 
 Time Complexity-O(nlog(n))-n-number of nodes.
 Space Complexity-O(log(n))
@@ -69,7 +69,7 @@ Space Complexity-O(log(n))
 # Q5)Find the element in a singly linked list that's m elements from the end. For example, if a linked list has 5 elements, the 3rd element from the end is the 3rd element.
 
 
-Solution5)Here i first created a linkedlist,then traversed through every node to calcluste the length.Then we find distance between total length and mth element we want to find.Now we iterative though the list again till this distance,to find the mth element.
+Solution5)Here i first created a linkedlist,then traversed through every node to calculate the length.Then we find distance between total length and mth element we want to find.Now we iterative though the list again till this distance,to find the mth element.
 
 Time Complexity:O(n)-n-number of nodes.
 
