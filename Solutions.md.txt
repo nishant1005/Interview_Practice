@@ -1,0 +1,78 @@
+﻿# Interview_Practice
+
+# Q1 Given two strings s and t, determine whether some anagram of t is a substring of s. 
+
+
+
+
+
+Solution 1)Here we first check the validity of the test by comparing size of string T to S,and if T is bigger, the input is deemed invalid.
+
+
+here we coompare sorted substrings of s  the sorted substring t. If both are equal/same it returns ture, otherwise it returns false.
+
+Time Complexity is O(len(s)). 
+space complexity is O(1) 
+
+
+
+
+
+Q2)Given a string a, find the longest palindromic substring contained in a. Your function definition should look like question2(a), and return a string.
+
+
+
+
+Solution2)This is a simple brute force approach for iteratively parsing through each character of a substring, and checking if its a palindrome or not. If it is a palindrome, I have stored it in an array iteratively. Then the array with largest palindromic substring is our answer.
+
+
+
+
+Time Complexity-O(n^2)
+
+
+
+
+Space Complexity-O(1)
+
+
+
+Q3)Given an undirected graph G, find the minimum spanning tree within G.
+
+
+Solution3)Here after building the graph with unique vertices, I have sorted edges in descending order. Then we pop edges one by one until any disconnection. This will ultimately give us our MST.This is also called reverse-delete algorithim and is part of greedy algorithms category. 
+
+Please Note-->Time Complexity here is exactly equal to other classical algorithms like Kruskals and prems,so i chose this for my submission as its easier to understand and implement.
+
+PSEUDO CODE(https://en.wikipedia.org/wiki/Reverse-delete_algorithm):
+ 1  function ReverseDelete(edges[] E)
+ 2    sort E in decreasing order
+ 3    Define an index i ← 0
+ 4    while i < size(E)
+ 5       Define edge ← E[i]
+ 6         delete E[i]
+ 7         if graph is not connected
+ 8             E[i] ← edge
+ 9              i ← i + 1
+ 10   return edges[] E
+
+Time Complexity:O(ElogE)-e is number of edges
+Space Complexity:O(E)
+
+
+Q4)Find the least common ancestor between two nodes on a binary search tree.
+
+Solution4)First we find immediate parent for a node in a tree, then until the root node isn't reached I have found the oldest parent to a nodes 1 and nodes 2.Then i have checked if both of them share a common ancestor, and this is lest common ancestor.
+
+Time Complexity-O(nlog(n))-n-number of nodes. 
+Space Complexity-O(log(n))
+
+
+Q5)Find the element in a singly linked list that's m elements from the end. For example, if a linked list has 5 elements, the 3rd element from the end is the 3rd element.
+
+Solution5)Here i first created a linkedlist,then traversed through every node to calculate the length. Then we find distance between total length and mth element we want to find. Now we iterative though the list again till this distance, to find the mth element.
+
+Time Complexity:O(n)-n-number of nodes.
+Space Comlexity:O(1)
+
+
