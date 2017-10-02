@@ -7,15 +7,17 @@
 
 
 Solution 1)Here we first check the validity of the test by comparing size of string T to S,and if T is bigger, the input is deemed invalid.
-
-
-here we coompare sorted substrings of s  the sorted substring t. If both are equal/same it returns ture, otherwise it returns false.
-
-Time Complexity is O(len(s)). 
-space complexity is O(1) 
+Now in order to check for anagram, I have runned through every character in string s one by one and checked whether any character is present in string t.If it is present,then i have removed this character iteratively.Now,if string t's characters(2 characters) are matched and removed=,length of this string will be zero, hence we have an anagram.
 
 
 
+
+Time Complexity:O(n)-where n is length of string s.
+
+
+
+
+Space Complexity:O(1)
 
 
 Q2)Given a string a, find the longest palindromic substring contained in a. Your function definition should look like question2(a), and return a string.
@@ -40,9 +42,7 @@ Space Complexity-O(1)
 Q3)Given an undirected graph G, find the minimum spanning tree within G.
 
 
-Solution3)Here after building the graph with unique vertices, I have sorted edges in descending order. Then we pop edges one by one until any disconnection. This will ultimately give us our MST.This is also called reverse-delete algorithim and is part of greedy algorithms category. 
-
-Please Note-->Time Complexity here is exactly equal to other classical algorithms like Kruskals and prems,so i chose this for my submission as its easier to understand and implement.
+Solution3)Here after building the graph with unique vertices, I have sorted edges in descending order. Then we pop edges one by one until any disconnection. This will ultimately give us our MST.
 
 PSEUDO CODE(https://en.wikipedia.org/wiki/Reverse-delete_algorithm):
  1  function ReverseDelete(edges[] E)
@@ -56,7 +56,7 @@ PSEUDO CODE(https://en.wikipedia.org/wiki/Reverse-delete_algorithm):
  9              i ← i + 1
  10   return edges[] E
 
-Time Complexity:O(ElogE)-e is number of edges
+Time Complexity:O(E log V (log log V)3) -E-number of edges,V-number of vertices. 
 Space Complexity:O(E)
 
 
